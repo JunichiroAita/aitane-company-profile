@@ -96,6 +96,7 @@ window.addEventListener("error", function () {
     font-size: 380px; line-height: 1; color: #0a0f1f;
     opacity: 0.045; letter-spacing: -0.02em; pointer-events: none;
     white-space: nowrap;
+    z-index: -1;
   }
 
   .eyebrow {
@@ -319,9 +320,9 @@ window.addEventListener("error", function () {
           <tr><td style="width:32%;"><b>社名</b></td><td>Aitane株式会社（Aitane Co., Ltd.）</td></tr>
           <tr><td><b>創業</b></td><td>2023年10月</td></tr>
           <tr><td><b>代表者</b></td><td>代表取締役 會田 純一朗</td></tr>
-          <tr><td><b>所在地</b></td><td class="tbd">確定後に更新</td></tr>
-          <tr><td><b>資本金</b></td><td class="tbd">確定後に更新</td></tr>
-          <tr><td><b>従業員数</b></td><td class="tbd">確定後に更新</td></tr>
+          <tr><td><b>所在地</b></td><td>東京都千代田区九段北一丁目3番3号 九段下東急真サクラビル6階</td></tr>
+          <tr><td><b>資本金</b></td><td>84,999,990円（資本準備金含む）</td></tr>
+          <tr><td><b>従業員数</b></td><td>12名</td></tr>
         </table>
       </div>
       <div style="width:440px; flex:none;">
@@ -599,10 +600,10 @@ function el(n, a, p){ const e=document.createElementNS(NS,n); for(const k in a) 
 
 /* ===== traction chart (light palette) ===== */
 const g = {
-  labels:   ["25/11","25/12","26/01","26/02","26/03","26/04","26/05","26/06","26/07"],
-  cumUsers: [3,14,17,31,32,39,68,150,172],
-  cumOrgs:  [3,8,10,13,13,18,42,117,134],
-  newOrgs:  [3,5,2,3,0,5,24,75,17],
+  labels:   ["26/05","26/06","26/07"],
+  cumUsers: [68,150,172],
+  cumOrgs:  [42,117,134],
+  newOrgs:  [24,75,17],
 };
 const chart = (function(){
   const svg = document.getElementById("tractionChart");
