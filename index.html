@@ -73,8 +73,31 @@ window.addEventListener("error", function () {
     flex: 1;
     background: linear-gradient(140deg, rgba(10,15,31,0.055) 2%, rgba(10,15,31,0.015) 34%, rgba(255,255,255,0.6) 97%);
     border-right: 1px solid rgba(10,15,31,0.045);
+    animation: pleatwave 8s ease-in-out infinite;
   }
   .stripes i:nth-child(even) { background: linear-gradient(140deg, rgba(10,15,31,0.028) 2%, rgba(255,255,255,0.65) 97%); }
+  /* stagger each pleat's phase so a soft wave of light travels across the background
+     (16 columns x -0.5s = one full 8s cycle -> seamless loop) */
+  @keyframes pleatwave {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.42; }
+  }
+  .stripes i:nth-child(1)  { animation-delay: -0.5s; }
+  .stripes i:nth-child(2)  { animation-delay: -1.0s; }
+  .stripes i:nth-child(3)  { animation-delay: -1.5s; }
+  .stripes i:nth-child(4)  { animation-delay: -2.0s; }
+  .stripes i:nth-child(5)  { animation-delay: -2.5s; }
+  .stripes i:nth-child(6)  { animation-delay: -3.0s; }
+  .stripes i:nth-child(7)  { animation-delay: -3.5s; }
+  .stripes i:nth-child(8)  { animation-delay: -4.0s; }
+  .stripes i:nth-child(9)  { animation-delay: -4.5s; }
+  .stripes i:nth-child(10) { animation-delay: -5.0s; }
+  .stripes i:nth-child(11) { animation-delay: -5.5s; }
+  .stripes i:nth-child(12) { animation-delay: -6.0s; }
+  .stripes i:nth-child(13) { animation-delay: -6.5s; }
+  .stripes i:nth-child(14) { animation-delay: -7.0s; }
+  .stripes i:nth-child(15) { animation-delay: -7.5s; }
+  .stripes i:nth-child(16) { animation-delay: -8.0s; }
   .stripes::before {
     content: ""; position: absolute; inset: 0; z-index: 1;
     background: radial-gradient(ellipse 62% 48% at 50% 42%, rgba(52,117,255,0.07), rgba(52,117,255,0.02) 45%, transparent 72%);
